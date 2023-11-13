@@ -1,11 +1,23 @@
 import reflex as rx
-# views
+
+# import views
 from .views.header import header
 
 
 def index() -> rx.Component:
     return rx.fragment(
-        header(),
+        rx.color_mode_button(
+            rx.color_mode_icon(),
+            float="right",
+        ),
+        rx.container(
+            header(),
+            style={
+                "max_width": "100vw",
+                "padding": "0",
+                "margin": "10px",
+            }
+        )
     )
 
 

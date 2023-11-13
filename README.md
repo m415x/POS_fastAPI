@@ -83,15 +83,10 @@ Before setting up the POS system, ensure that you have the following prerequisit
 
    > ```bash
    > cd POS_fastAPI
-   > ```
-
-3. Crear un entorno virtual
-
-   > ```bash
    > python -m venv .venv
    > ```
 
-4. Activate the virtual environment
+3. Activate Virtual Environment
 
    > _Linux / macOS_
    >
@@ -105,28 +100,28 @@ Before setting up the POS system, ensure that you have the following prerequisit
    > source .venv/Scripts/activate
    > ```
 
-5. Install Dependencies
+4. Install Dependencies
 
    > ```bash
    > pip install -r requirements.txt
    > ```
 
-6. Database Setup:
+5. Database Setup:
 
    1. Open pgAdmin and right-click on "Databases".
    2. Select "Create" and then "Database".
    3. Enter the name of the database and select the owner.
 
-7. Create the '.env' file in the root with the following variables
+6. Create the '.env' file in the root with the following variables
 
    > ```text
    > DB_URL="postgresql://<user>:<password>@localhost:5432/my_db"
    > ```
 
-8. Start the Application
+7. Start the Application
 
    > ```bash
    > reflex run
    > ```
 
-9. In your browser, access http://localhost:3000/
+8. In your browser, access http://localhost:3000/

@@ -1,18 +1,35 @@
 import reflex as rx
-from ..states import HeaderState
+
+# import components
+from ..components.button_header import button_header
 
 
 def header() -> rx.Component:
     return rx.hstack(
-        rx.color_mode_button(
-            rx.color_mode_icon(),
-            float="left",
+        rx.button_group(
+            button_header("Home", "#"),
+            button_header("Otro", "#"),
+            button_header("y otro", "#"),
         ),
-        rx.avatar(
-            name=HeaderState.name,
-            size="md",
-            border="solid 4px white",
-            bg=HeaderState.color,
-            on_click=HeaderState.flip_color,
+        rx.menu(
+            rx.menu_button(
+                rx.avatar(
+                    name="Cristian Lahoz",
+                    size="md",
+                    border="solid 4px white",
+                    bg="#3d3a4e",
+                    color="#fff"
+
+                ),
+            ),
+            rx.menu_list(
+                rx.menu_item("Example"),
+                rx.menu_divider(),
+                rx.menu_item("Example"),
+                rx.menu_item("Example"),
+                # bg="#3d3a4e"
+            ),
         ),
+
+
     )
