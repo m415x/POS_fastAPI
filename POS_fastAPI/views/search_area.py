@@ -4,7 +4,7 @@ import reflex as rx
 from ..components.button_header import button_header
 
 
-def header() -> rx.Component:
+def search_area() -> rx.Component:
     return rx.hstack(
         rx.button_group(
             button_header("Home", "#"),

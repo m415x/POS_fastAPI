@@ -14,7 +14,7 @@ def button_header(text: str, url: str) -> rx.Component:
             height="3rem",
             padding="0 2rem",
             border_radius="1.5rem",
-            background="#3d3a4e",
+            background="#303030",
             background_size="400%",
             color="#fff",
             border="none",

@@ -97,7 +97,7 @@ Before setting up the POS system, ensure that you have the following prerequisit
    > _Windows_
    >
    > ```bash
-   > source .venv/Scripts/activate
+   > .venv\Scripts\activate
    > ```
 
 4. Install Dependencies
@@ -122,6 +122,7 @@ Before setting up the POS system, ensure that you have the following prerequisit
 
    > ```bash
    > reflex run
+   > reflex run --loglevel debug
    > ```
 
 8. In your browser, access http://localhost:3000/
