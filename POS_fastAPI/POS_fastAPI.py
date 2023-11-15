@@ -17,7 +17,7 @@ def index() -> rx.Component:
                 sidebar_menu(),
                 col_span=1,
                 row_span=11,
-                border_radius="15px",
+                # border_radius="15px",
                 bg=Color.PRIMARY.value,
             ),
             rx.grid_item(
@@ -45,7 +45,7 @@ def index() -> rx.Component:
             gap=2,
             style={
                 "max_width": "100vw",
-                "padding": "0.5em",
+                # "padding": "0.5em",
                 "margin": "0",
                 "background": Color.BACKGROUND.value
             }

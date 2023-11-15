@@ -1,3 +1,5 @@
+from turtle import position
+from click import style
 import reflex as rx
 
 # import components
@@ -10,26 +12,27 @@ def search_area() -> rx.Component:
             button_header("Home", "#"),
             button_header("Otro", "#"),
             button_header("y otro", "#"),
-        ),
-        rx.menu(
-            rx.menu_button(
-                rx.avatar(
-                    name="Cristian Lahoz",
-                    size="md",
-                    border="solid 4px white",
-                    bg="#3d3a4e",
-                    color="#fff"
+            rx.form(
+                rx.input_group(
+                    rx.input_left_element(
+                        rx.icon(tag="search"),
+                    ),
+                    rx.input(
+                        placeholder="Phone number"
+                    ),
+                    rx.input_right_element(
+                        rx.icon(tag="search"),
 
+                    ),
+                    style={
+                        "display": "flex",
+                        "align_items": "center",
+                        "border": "1px solid #ccc",
+                        "border_radius": "9999px",
+                        "padding": "0.5rem",
+                        "margin_bottom": "1rem"
+                    }
                 ),
-            ),
-            rx.menu_list(
-                rx.menu_item("Example"),
-                rx.menu_divider(),
-                rx.menu_item("Example"),
-                rx.menu_item("Example"),
-                # bg="#3d3a4e"
-            ),
+            )
         ),
-
-
     )
