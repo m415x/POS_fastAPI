@@ -1,18 +1,24 @@
+from pydoc import classname
 import reflex as rx
 
 
 def cart_item() -> rx.Component:
-    return rx.table_container(
-        rx.table(
-            caption="",
-            headers=["Item", "Cant", "Precio", "Neto"],
-            rows=[
-                ("Pinza", 1, 5000, 5000),
-                ("Clavo", 20, 10, 200),
-                ("Foco", 3, 700, 2100),
-            ],
-            footers=["", "", "", ""],
-            # footers=["", 24, "", 7300],
-            # variant="striped",
+    return rx.card(
+        rx.form(
+            rx.hstack(
+                rx.button(),
+                rx.input(
+                    classname="quantity"
+                ),
+                rx.button(),
+                rx.spacer(),
+                rx.text("Clavo", font_size="1em"),
+                rx.spacer(),
+                rx.text(100, font_size="1em"),
+                rx.spacer(),
+                rx.text(100, font_size="1em"),
+                width="100%"
+            ),
+            width="100%"
         )
     )

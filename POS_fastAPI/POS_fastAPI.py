@@ -3,7 +3,11 @@ import reflex as rx
 # import views
 from .views.sidebar_menu import sidebar_menu
 from .views.search_area import search_area
+from .views.product_area import product_area
 from .views.cart_area import cart_area
+
+# import styles
+from .styles.colors import Color
 
 
 def index() -> rx.Component:
@@ -13,7 +17,8 @@ def index() -> rx.Component:
                 sidebar_menu(),
                 col_span=1,
                 row_span=11,
-                # bg="lightblue",
+                border_radius="15px",
+                bg=Color.PRIMARY.value,
             ),
             rx.grid_item(
                 search_area(),
@@ -27,11 +32,14 @@ def index() -> rx.Component:
                 row_span=8,
                 bg="orange"
             ),
-            rx.grid_item(col_span=19, row_span=10, bg="yellow"),
+            rx.grid_item(
+                product_area(),
+                col_span=19,
+                row_span=10,
+            ),
             rx.grid_item(col_span=8, row_span=3, bg="purple"),
             template_columns="repeat(28, 1fr)",
             template_rows="repeat(11, 1fr)",
-            # h="200px",
             width="100vw",
             height="100vh",
             gap=2,
@@ -39,7 +47,7 @@ def index() -> rx.Component:
                 "max_width": "100vw",
                 "padding": "0.5em",
                 "margin": "0",
-                "background": "#1e1e1e"
+                "background": Color.BACKGROUND.value
             }
         ),
     )
