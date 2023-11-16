@@ -2,15 +2,15 @@ from enum import Enum
 
 
 class Color(Enum):
-    PRIMARY = "#303030"
-    SECONDARY = "#009bf0"
-    # SECONDARY = "#1eb9cb"
-    BACKGROUND = "#111111"
-    CONTENT = "#131313"
-    HOVER = "#ffffff"
+    PRIMARY_DARK = "#303030"
+    SECONDARY_DARK = "#009bf0"
+    # SECONDARY_DARK = "#1eb9cb"
+    BACKGROUND_DARK = "#111111"
+    CONTENT_DARK = "#131313"
+    HOVER_DARK = "#eeeeee"
 
 
 class TextColor(Enum):
-    HEADER = "#F1F2F4"
-    BODY = "#C3C7CB"
-    FOOTER = "#A3ABB2"
+    HEADER_DARK = "#ffffff"
+    BODY_DARK = "#eeeeee"
+    FOOTER_DARK = "#dddddd"

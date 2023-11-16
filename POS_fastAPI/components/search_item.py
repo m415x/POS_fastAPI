@@ -1,7 +1,7 @@
 import reflex as rx
 
 
-def button_header(text: str, url: str) -> rx.Component:
+def search_item(text: str, url: str) -> rx.Component:
     return rx.link(
         rx.button(
             rx.span(

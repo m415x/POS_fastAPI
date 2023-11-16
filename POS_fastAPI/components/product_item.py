@@ -1,7 +1,8 @@
 import reflex as rx
 
 # import styles
-from ..styles.colors import Color
+from ..styles.colors import Color, TextColor
+from ..styles.sizes import Size
 
 
 def product_item() -> rx.Component:
@@ -18,20 +19,20 @@ def product_item() -> rx.Component:
                 rx.stack(
                     rx.text(
                         "Some",
-                        font_size="25px",
-                        line_height="1.1em",
-                        color="#32325d",
+                        font_size=Size.LARGE.value,
+                        line_height=Size.MEDIUM.value,
+                        color=TextColor.HEADER_DARK.value,
                         mb="0.2em"
                     ),
                     rx.text(
                         "Some",
-                        line_height="1.5em",
-                        color="#32325d",
+                        line_height=Size.LARGE.value,
+                        color=TextColor.BODY_DARK.value,
                     ),
                     p="1rem"
                 ),
                 direction="column",
-                bg=Color.PRIMARY.value,
+                bg=Color.PRIMARY_DARK.value,
                 border_radius="6px",
                 box_shadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)",
                 overflow="hidden",
@@ -45,5 +46,4 @@ def product_item() -> rx.Component:
             ),
             padding="0",
         ),
-        # margin="0.5rem auto"
     )

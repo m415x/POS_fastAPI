@@ -18,13 +18,13 @@ def index() -> rx.Component:
                 col_span=1,
                 row_span=11,
                 # border_radius="15px",
-                bg=Color.PRIMARY.value,
+                bg=Color.PRIMARY_DARK.value,
             ),
             rx.grid_item(
                 search_area(),
                 col_span=19,
                 row_span=1,
-                bg="lightgreen"
+                # bg="lightblue"
             ),
             rx.grid_item(
                 cart_area(),
@@ -47,13 +47,15 @@ def index() -> rx.Component:
                 "max_width": "100vw",
                 # "padding": "0.5em",
                 "margin": "0",
-                "background": Color.BACKGROUND.value
+                "background": Color.BACKGROUND_DARK.value
             }
         ),
     )
 
 
 # Add state and page to the app.
-app = rx.App()
+app = rx.App(
+    stylesheets=["styles/search-area.css",],
+)
 app.add_page(index, route="/")
 app.compile()
