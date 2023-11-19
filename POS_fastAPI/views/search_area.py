@@ -21,9 +21,9 @@ options: List[str] = ["Option 1", "Option 2", "Option 3"]
 def search_area() -> rx.Component:
     return rx.flex(
         rx.button_group(
-            search_item("Home", "#"),
-            search_item("Otro", "#"),
-            search_item("y otro", "#"),
+            search_item("client 1"),
+            search_item(),
+            align_self="center",
         ),
         rx.hstack(
             rx.select(
@@ -31,11 +31,12 @@ def search_area() -> rx.Component:
                 placeholder="Select category",
                 color=TextColor.BODY_DARK.value,
                 bg=Color.PRIMARY_DARK.value,
-                error_border_color=Color.PRIMARY_DARK.value,
-                focus_border_color=Color.SECONDARY_DARK.value,
+                focus_border_color=Color.OUTLINE_DARK.value,
                 border_radius="30px",
+                h="3em",
                 max_w="200px",
                 style={
+                    "cursor": "pointer",
                     "option": {
                         "background": Color.PRIMARY_DARK.value,
                     },
@@ -70,6 +71,7 @@ def search_area() -> rx.Component:
         ),
         direction="row",
         justify="space-between",
-        align="center",
-        padding="1rem 1rem 0 1rem"
+        align_self="center",
+        h="100%",
+        margin="0 0.5em"
     )

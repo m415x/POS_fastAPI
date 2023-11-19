@@ -1,45 +1,33 @@
 import reflex as rx
 
+# import styles
+from ..styles.colors import Color, TextColor
 
-def search_item(text: str, url: str) -> rx.Component:
-    return rx.link(
-        rx.button(
-            rx.span(
-                text,
-                position="relative",
-                z_index="1",
-            ),
-            position="relative",
-            overflow="hidden",
-            height="3rem",
-            padding="0 2rem",
-            border_radius="1.5rem",
-            background="#303030",
-            background_size="400%",
-            color="#fff",
-            border="none",
-            _hover={
-                "::before": {
-                    "transform": "scaleX(1)"
-                }
-            },
-            _before={
-                "content": "''",
-                "position": "absolute",
-                "top": "0",
-                "left": "0",
-                "transform": "scaleX(0)",
-                "transform_origin": "0 50%",
-                "width": "100%",
-                "height": "inherit",
-                "border_radius": "inherit",
-                "background": """linear-gradient(
-                    82.3deg,
-                    rgba(150, 93, 233, 1) 10.8%,
-                    rgba(99, 88, 238, 1) 94.3%
-                )""",
-                "transition": "all 0.475s",
-            }
+
+def search_item(text: str | None = None) -> rx.Component:
+    return rx.button(
+        rx.icon(
+            tag="add"
         ),
-        href=url,
+        class_name="cursor-pointer outline-none hover:rotate-90 duration-300",  # type: ignore
+        border_radius="50%",
+        w="3em",
+        h="3em",
+        bg=Color.PRIMARY_DARK.value,
+        _hover={
+            "background": Color.HOVER_DARK.value
+        }
+    ) if text == None else (
+        rx.button(
+            text,
+            color=TextColor.BODY_DARK.value,
+            class_name="cursor-pointer outline-none duration-300",
+            border_radius="30px",
+            h="3em",
+            bg=Color.PRIMARY_DARK.value,
+            _hover={
+                "background": Color.HOVER_DARK.value
+            },
+            # onContextMenu="mostrar menu contextual con opciones de guardado o cerrado"
+        )
     )

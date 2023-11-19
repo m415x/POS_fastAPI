@@ -3,7 +3,8 @@
     --input-bg-color: #303030;
     --focus-input-bg-color: transparent;
     --text-color: #ddd;
-    --active-color: #009bf0;
+    --active-color: #034e78;
+    --active-outline: #009bf0;
     --width-of-input: 300px;
     --inline-padding-of-input: 1.2em;
     --gap: 0.9rem;
@@ -11,11 +12,12 @@
 
 /* form style */
 .search__form {
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     gap: 0.5rem;
     align-items: center;
     width: var(--width-of-input);
+    height: 3em;
     position: relative;
     isolation: isolate;
 }
@@ -97,7 +99,7 @@ svg {
 
 /* input background change in focus */
 .search__input:focus~.search__bg {
-    border: 1px solid var(--active-color);
+    border: 1px solid var(--active-outline);
     background: var(--focus-input-bg-color);
 }
 
