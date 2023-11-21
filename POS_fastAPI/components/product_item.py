@@ -2,14 +2,18 @@ import reflex as rx
 
 
 # import styles
-from ..styles.colors import Color, TextColor, StockColor
+from ..styles.colors import DarkThemeColor
 from ..styles.sizes import Size
+
+# import utils
+from ..utils.formatting import format_int, format_float_1f, format_float_2f
 
 
 def product_item(img: str, id: str, stock: float, info: str, price: float) -> rx.Component:
 
-    # Formatear el número con separador de miles y decimales
-    format_price = f'$ {"{:,.2f}".format(price).replace(",", "~").replace(".", ",").replace("~", ".")}'
+    formatted_stock = format_int(stock) if int(
+        stock) == stock else format_float_1f(stock)
+    formatted_price = format_float_2f(price)
 
     return rx.card(
         rx.card_body(
@@ -30,14 +34,14 @@ def product_item(img: str, id: str, stock: float, info: str, price: float) -> rx
                             id,
                             font_size=Size.MEDIUM.value,
                             line_height=Size.LARGE.value,
-                            color=TextColor.FOOTER_DARK.value,
+                            color=DarkThemeColor.WHITE.value,
                             letter_spacing="1px",
                         ),
                         rx.text(
-                            f"STOCK {stock}",
+                            f"Stock {formatted_stock} u",
                             font_size=Size.MEDIUM.value,
                             line_height=Size.LARGE.value,
-                            color=StockColor.LOW_DARK.value,
+                            color=DarkThemeColor.DANGER.value,
                         ),
                         justify="space-between"
                     ),
@@ -45,13 +49,13 @@ def product_item(img: str, id: str, stock: float, info: str, price: float) -> rx
                         info,
                         font_size=Size.DEFAULT.value,
                         line_height=Size.LARGE.value,
-                        color=TextColor.HEADER_DARK.value,
+                        color=DarkThemeColor.WHITE.value,
                         mb="0.2em"
                     ),
                     rx.text(
-                        format_price,
+                        f"$ {formatted_price}",
                         line_height=Size.LARGE.value,
-                        color=TextColor.FOOTER_DARK.value,
+                        color=DarkThemeColor.WHITE.value,
                         align_self="flex-end",
                         letter_spacing="1px",
                     ),
@@ -59,19 +63,21 @@ def product_item(img: str, id: str, stock: float, info: str, price: float) -> rx
                 ),
                 direction="column",
                 align="center",
-                bg=Color.PRIMARY_DARK.value,
-                border_radius="6px",
+                bg=DarkThemeColor.SECONDARY.value,
+                border_radius="20px",
                 box_shadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)",
                 overflow="hidden",
                 transition="transform 0.5s",
                 _hover={
                     "cursor": "pointer",
                     "transform": "scale(1.1)",
-                    "background": Color.CONTENT_DARK.value,
+                    "background": DarkThemeColor.CONTENT.value,
                 },
                 max_width="12rem",
                 min_width="10rem",
             ),
             padding="0",
         ),
+        border_radius="20px",
+
     )

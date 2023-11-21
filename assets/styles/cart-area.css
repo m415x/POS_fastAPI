@@ -1,0 +1,16 @@
+/* Input Number Container */
+.quantity {
+    --number-input-input-padding: 0 !important;
+    align-self: center;
+}
+
+/* Input Number */
+.css-111s29k {
+    text-align: center;
+}
+
+/* Input Number buttons decrement/increment */
+.css-1jj9yua {
+    display: none !important;
+
+}

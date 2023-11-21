@@ -9,7 +9,7 @@ def sidebar_item(src: str) -> rx.Component:
             transition="filter 0.1s ease-out",
             _hover={
                 "transition_duration": "0.3s",
-                "filter": "invert(50%)",
+                "filter": "invert(70%)",
             },
         ),
         href="#",
