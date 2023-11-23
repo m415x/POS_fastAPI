@@ -68,11 +68,18 @@ def product_item(img: str, id: str, stock: float, info: str, price: float) -> rx
                 box_shadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)",
                 overflow="hidden",
                 transition="transform 0.5s",
-                _hover={
-                    "cursor": "pointer",
-                    "transform": "scale(1.1)",
-                    "background": DarkThemeColor.CONTENT.value,
-                },
+                # _hover={
+                #     "cursor": "pointer",
+                #     "transform": "scale(1.1)",
+                #     "background": DarkThemeColor.CONTENT.value,
+                # },
+                style={
+                    ":hover": {
+                        "cursor": "pointer",
+                        "transform": "scale(1.1)",
+                        "background": DarkThemeColor.CONTENT.value,
+                    },
+                },  # type: ignore
                 max_width="12rem",
                 min_width="10rem",
             ),

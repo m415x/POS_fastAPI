@@ -12,5 +12,5 @@ class DarkThemeColor(Enum):
     WHITE = "#ffffff"
     OUTLINE = "#009bf0"
     BACKGROUND = "#111111"
-    CONTENT = "#181818"
-    HOVER = "#535353"
+    CONTENT = "#1c1d21"
+    HOVER = "#40444f"

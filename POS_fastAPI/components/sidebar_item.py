@@ -7,10 +7,16 @@ def sidebar_item(src: str) -> rx.Component:
             src=f"icons/{src}",
             width="2.5vw",
             transition="filter 0.1s ease-out",
-            _hover={
-                "transition_duration": "0.3s",
-                "filter": "invert(70%)",
-            },
+            # _hover={
+            #     "transition_duration": "0.3s",
+            #     "filter": "invert(70%)",
+            # },
+            style={
+                ":hover": {
+                    "transition_duration": "0.3s",
+                    "filter": "invert(70%)",
+                },
+            },  # type: ignore
         ),
         href="#",
     )

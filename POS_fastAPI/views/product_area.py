@@ -63,8 +63,9 @@ def product_area() -> rx.Component:
             wrap="wrap",
             gap=["0.25rem", "0.5rem", "0.75rem", "1rem", "1.25rem"],
         ),
+        id="product_area",
         max_w="100%",
-        max_h=f"calc((10/11)*100vh - 0.1em)",
+        max_h=f"calc((10/11)*100vh - 1em)",
         padding_top="0.5rem",
         overflow_y="auto",
     )

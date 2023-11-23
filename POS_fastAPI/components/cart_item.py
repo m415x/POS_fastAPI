@@ -1,5 +1,3 @@
-from pydoc import classname
-from turtle import width
 import reflex as rx
 
 
@@ -29,9 +27,10 @@ def cart_item() -> rx.Component:
                 "Clavo",
                 font_size="1em",
                 flex="0 0 40%",
+                custom_attrs={'title': 'EF-00012'},
             ),
             rx.text(
-                "$ 100",
+                "100",
                 font_size="1em",
                 flex="0 0 15%",
                 text_align="right",
@@ -77,7 +76,7 @@ def cart_item() -> rx.Component:
                 justify="flex-end",
             ),
             rx.text(
-                "$ 2000",
+                "2.000",
                 font_size="1em",
                 flex="0 0 15%",
                 text_align="right",

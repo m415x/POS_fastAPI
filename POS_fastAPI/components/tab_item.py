@@ -14,9 +14,14 @@ def tab_item(text: str | None = None) -> rx.Component:
         w="3em",
         h="3em",
         bg=DarkThemeColor.SECONDARY.value,
-        _hover={
-            "background": DarkThemeColor.HOVER.value,
-        }
+        # _hover={
+        #     "background": DarkThemeColor.HOVER.value,
+        # },
+        style={
+            ":hover": {
+                "background": DarkThemeColor.HOVER.value,
+            },
+        },  # type: ignore
     ) if text == None else (
         rx.button(
             text,
@@ -25,9 +30,14 @@ def tab_item(text: str | None = None) -> rx.Component:
             border_radius="30px",
             h="3em",
             bg=DarkThemeColor.SECONDARY.value,
-            _hover={
-                "background": DarkThemeColor.HOVER.value,
-            },
+            # _hover={
+            #     "background": DarkThemeColor.HOVER.value,
+            # },
+            style={
+                ":hover": {
+                    "background": DarkThemeColor.HOVER.value,
+                }
+            },  # type: ignore
             # onContextMenu="mostrar menu contextual con opciones de guardado o cerrado"
         )
     )

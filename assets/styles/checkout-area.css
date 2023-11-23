@@ -1,0 +1,10 @@
+/* Input Number Container */
+.discount {
+    --number-input-input-padding: 0 !important;
+    align-self: center;
+}
+
+/* Input Number */
+input[name="discount"] {
+    text-align: end;
+}

@@ -9,11 +9,22 @@ from ..styles.colors import DarkThemeColor
 
 def cart_area() -> rx.Component:
     return rx.vstack(
-        rx.heading(
-            "Order N° 1234",
-            size="md",
-            align_self="flex-start",
-            padding="0.5em"
+        rx.flex(
+            rx.heading(
+                "Order N° 1234",
+                size="md",
+                align_self="flex-start",
+                padding="0.5em"
+            ),
+            rx.heading(
+                "Client N° 1",
+                size="md",
+                align_self="flex-start",
+                padding="0.5em"
+            ),
+            direction="row",
+            justify="space-between",
+            w="100%",
         ),
         rx.flex(
             rx.text(
@@ -47,21 +58,23 @@ def cart_area() -> rx.Component:
                 cart_item(),
                 cart_item(),
                 cart_item(),
-                cart_item(),                cart_item(),
-                cart_item(),
-                cart_item(),                cart_item(),
-                cart_item(),
-                cart_item(),                cart_item(),
-                cart_item(),
-                cart_item(),                cart_item(),
-                cart_item(),
-                cart_item(),                cart_item(),
                 cart_item(),
                 cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+                cart_item(),
+
             ),
+            id="cart_area",
             box_sizing="border-box",
             w="100%",
-            h=f"calc((8/11)*100vh - 5.875em)",
+            h=f"calc((7/11)*100vh - 7.475em)",
             overflow_y="auto",
         ),
     )

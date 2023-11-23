@@ -11,10 +11,16 @@ def sidebar_menu() -> rx.Component:
         rx.image(
             src=f"icons/avatar_{theme}.svg",
             width="2.5vw",
-            _hover={
-                "transition_duration": "0.3s",
-                "filter": "invert(50%)",
-            },
+            # _hover={
+            #     "transition_duration": "0.3s",
+            #     "filter": "invert(70%)",
+            # },
+            style={
+                ":hover": {
+                    "transition_duration": "0.3s",
+                    "filter": "invert(70%)",
+                },
+            },  # type: ignore
         ),
         rx.vstack(
             sidebar_item(f"home_{theme}.svg"),
