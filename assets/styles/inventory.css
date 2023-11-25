@@ -1,23 +1,26 @@
+/** INVENTORY PANEL **/
+
 /* Oculta la barra de desplazamiento por defecto */
-#product_area {
+.dvn-scroller {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }
 
 /* Estilo para la barra de desplazamiento */
-#product_area::-webkit-scrollbar {
-    width: 8px;
+.dvn-scroller::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
     /* Ancho de la barra de desplazamiento */
 }
 
-#product_area::-webkit-scrollbar-thumb {
+.dvn-scroller::-webkit-scrollbar-thumb {
     background-color: #888;
     /* Color de fondo de la barra de desplazamiento */
     border-radius: 4px;
     /* Radio de esquina de la barra de desplazamiento */
 }
 
-#product_area:hover::-webkit-scrollbar-thumb {
+.dvn-scroller:hover::-webkit-scrollbar-thumb {
     background-color: #555;
     /* Cambia el color de fondo cuando el ratón pasa por encima */
 }

@@ -2,11 +2,11 @@ import reflex as rx
 from typing import List
 
 # import components
-from ..components.tab_item import tab_item
+from ..components.tab_component import tab_component
 from ..components.html_components import search_input
 
 # import styles
-from ..styles.colors import DarkThemeColor
+from .....styles.colors import DarkThemeColor
 
 # import states
 # from ..states import State
@@ -19,11 +19,11 @@ options: List[str] = ["Option 1", "Option 2", "Option 3"]
 #     option: str = "No selection yet."
 
 
-def tool_area() -> rx.Component:
+def tool_panel() -> rx.Component:
     return rx.flex(
         rx.button_group(
-            tab_item("client 1"),
-            tab_item(),
+            tab_component("client 1"),
+            tab_component(),
             align_self="center",
         ),
         rx.hstack(

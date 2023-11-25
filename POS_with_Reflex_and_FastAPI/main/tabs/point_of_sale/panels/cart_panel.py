@@ -1,13 +1,13 @@
 import reflex as rx
 
 # import components
-from ..components.cart_item import cart_item
+from ..components.cart_component import cart_component
 
 # import styles
-from ..styles.colors import DarkThemeColor
+from .....styles.colors import DarkThemeColor
 
 
-def cart_area() -> rx.Component:
+def cart_panel() -> rx.Component:
     return rx.vstack(
         rx.flex(
             rx.heading(
@@ -55,23 +55,23 @@ def cart_area() -> rx.Component:
         ),
         rx.box(
             rx.vstack(
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
-                cart_item(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
+                cart_component(),
 
             ),
-            id="cart_area",
+            id="cart_panel",
             box_sizing="border-box",
             w="100%",
             h=f"calc((7/11)*100vh - 7.475em)",

@@ -1,10 +1,10 @@
 import reflex as rx
 
 # import styles
-from ..styles.colors import DarkThemeColor
+from .....styles.colors import DarkThemeColor
 
 
-def tab_item(text: str | None = None) -> rx.Component:
+def tab_component(text: str | None = None) -> rx.Component:
     return rx.button(
         rx.icon(
             tag="add"

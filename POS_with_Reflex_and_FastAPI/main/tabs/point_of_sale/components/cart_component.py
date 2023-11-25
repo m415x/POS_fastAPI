@@ -1,13 +1,11 @@
 import reflex as rx
 
-
 # import styles
-from ..styles.colors import DarkThemeColor
-from ..styles.sizes import Size
-
+from .....styles.colors import DarkThemeColor
+from .....styles.sizes import Size
 
 # import state
-from ..states import State
+from .....states import State
 
 
 # class NumberInputState(State):
@@ -20,7 +18,7 @@ from ..states import State
 #         self.value -= 0.5
 
 
-def cart_item() -> rx.Component:
+def cart_component() -> rx.Component:
     return rx.card(
         rx.flex(
             rx.text(

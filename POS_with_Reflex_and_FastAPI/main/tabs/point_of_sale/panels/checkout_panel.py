@@ -1,10 +1,9 @@
 import reflex as rx
 from typing import List
 
-
 # import styles
-from ..styles.colors import DarkThemeColor
-from ..styles.sizes import Size
+from .....styles.colors import DarkThemeColor
+from .....styles.sizes import Size
 
 
 options_discount: List[str] = ["amount", "percentage",]
@@ -14,7 +13,7 @@ options_discount: List[str] = ["amount", "percentage",]
 #     text: str = "No Selection"
 
 
-def checkout_area() -> rx.Component:
+def checkout_panel() -> rx.Component:
     return rx.vstack(
         rx.flex(
             rx.text(

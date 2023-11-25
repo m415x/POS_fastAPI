@@ -1,15 +1,14 @@
 import reflex as rx
 
-
 # import styles
-from ..styles.colors import DarkThemeColor
-from ..styles.sizes import Size
+from .....styles.colors import DarkThemeColor
+from .....styles.sizes import Size
 
 # import utils
-from ..utils.formatting import format_int, format_float_1f, format_float_2f
+from .....utils.formatting import format_int, format_float_1f, format_float_2f
 
 
-def product_item(img: str, id: str, stock: float, info: str, price: float) -> rx.Component:
+def product_component(img: str, id: str, stock: float, info: str, price: float) -> rx.Component:
 
     formatted_stock = format_int(stock) if int(
         stock) == stock else format_float_1f(stock)

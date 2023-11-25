@@ -76,13 +76,13 @@ Before setting up the POS system, ensure that you have the following prerequisit
 1. Clone the Repository
 
    > ```bash
-   > git clone https://github.com/m415x/POS_fastAPI.git
+   > git clone https://github.com/m415x/POS_with_Reflex_and_FastAPI.git
    > ```
 
 2. Set Up Virtual Environment
 
    > ```bash
-   > cd POS_fastAPI
+   > cd POS_with_Reflex_and_FastAPI
    > python -m venv .venv
    > ```
 

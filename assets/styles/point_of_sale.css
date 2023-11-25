@@ -1,3 +1,5 @@
+/** TOOL PANEL **/
+
 .search__form {
     --input-text-color: #fff;
     --input-bg-color: #303030;
@@ -121,4 +123,89 @@ svg {
 .search__input:-webkit-autofill:active {
     -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
     -webkit-transition-delay: 9999s;
+}
+
+
+/** PRODUCT PANEL **/
+
+/* Oculta la barra de desplazamiento por defecto */
+#product_panel {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Estilo para la barra de desplazamiento */
+#product_panel::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+#product_panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de fondo de la barra de desplazamiento */
+    border-radius: 4px;
+    /* Radio de esquina de la barra de desplazamiento */
+}
+
+#product_panel:hover::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Cambia el color de fondo cuando el ratón pasa por encima */
+}
+
+
+/** CART PANEL **/
+
+/* Oculta la barra de desplazamiento por defecto */
+#cart_panel {
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+/* Estilo para la barra de desplazamiento */
+#cart_panel::-webkit-scrollbar {
+    width: 8px;
+    /* Ancho de la barra de desplazamiento */
+}
+
+#cart_panel::-webkit-scrollbar-thumb {
+    background-color: #888;
+    /* Color de fondo de la barra de desplazamiento */
+    border-radius: 4px;
+    /* Radio de esquina de la barra de desplazamiento */
+}
+
+#cart_panel:hover::-webkit-scrollbar-thumb {
+    background-color: #555;
+    /* Cambia el color de fondo cuando el ratón pasa por encima */
+}
+
+
+/* Input Number Container */
+.quantity {
+    --number-input-input-padding: 0 !important;
+    align-self: center;
+}
+
+/* Input Number */
+input[name="quantity"] {
+    text-align: center;
+}
+
+/* Input Number buttons decrement/increment */
+.css-1jj9yua {
+    display: none !important;
+}
+
+
+/** CHECKOUT PANEL **/
+
+/* Input Number Container */
+.discount {
+    --number-input-input-padding: 0 !important;
+    align-self: center;
+}
+
+/* Input Number */
+input[name="discount"] {
+    text-align: end;
 }
