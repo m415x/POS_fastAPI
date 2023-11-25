@@ -12,24 +12,24 @@ from ...styles.colors import DarkThemeColor
 
 def point_of_sale_view() -> rx.Component:
     return rx.grid(
-        rx.grid_component(
+        rx.grid_item(
             tool_panel(),
             col_span=19,
             row_span=1,
         ),
-        rx.grid_component(
+        rx.grid_item(
             cart_panel(),
             col_span=8,
             row_span=7,
             border_radius="15px",
             bg=DarkThemeColor.SECONDARY.value,
         ),
-        rx.grid_component(
+        rx.grid_item(
             product_panel(),
             col_span=19,
             row_span=10,
         ),
-        rx.grid_component(
+        rx.grid_item(
             checkout_panel(),
             col_span=8,
             row_span=4,

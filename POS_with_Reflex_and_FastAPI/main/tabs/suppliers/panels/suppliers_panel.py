@@ -10,7 +10,7 @@ from .....styles.sizes import Size
 from .....states import State
 
 
-class DataInventory(State):
+class DataSuppliers(State):
     clicked_data: str = "Cell clicked: "
 
     cols: list[Any] = [
@@ -360,11 +360,11 @@ class DataInventory(State):
         print(f"Cell clicked: {pos}")
 
 
-def inventory_panel() -> rx.Component:
+def suppliers_panel() -> rx.Component:
     return rx.data_editor(
-        columns=DataInventory.cols,
-        data=DataInventory.data,
-        on_cell_clicked=DataInventory.click_cell,
+        columns=DataSuppliers.cols,
+        data=DataSuppliers.data,
+        on_cell_clicked=DataSuppliers.click_cell,
         row_height=40,
         smooth_scroll_x=True,
         smooth_scroll_y=True,

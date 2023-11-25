@@ -1,11 +1,11 @@
 import reflex as rx
 
 # import panels
-from ..tabs.inventory.panels.filter_panel import filter_panel
-from ..tabs.inventory.panels.inventory_panel import inventory_panel
+from ..tabs.suppliers.panels.filter_panel import filter_panel
+from ..tabs.suppliers.panels.suppliers_panel import suppliers_panel
 
 
-def inventory_view() -> rx.Component:
+def suppliers_view() -> rx.Component:
     return rx.grid(
         rx.grid_item(
             filter_panel(),
@@ -14,7 +14,7 @@ def inventory_view() -> rx.Component:
             w="100%",
         ),
         rx.grid_item(
-            inventory_panel(),
+            suppliers_panel(),
             col_span=27,
             row_span=10,
             padding="0 0 0 10px",

@@ -8,7 +8,7 @@ from .....styles.sizes import Size
 from .....utils.formatting import format_int, format_float_1f, format_float_2f
 
 
-def product_component(img: str, id: str, stock: float, info: str, price: float) -> rx.Component:
+def product_component(img: str, id: str, stock: float, unit: str, info: str, price: float) -> rx.Component:
 
     formatted_stock = format_int(stock) if int(
         stock) == stock else format_float_1f(stock)
@@ -26,6 +26,7 @@ def product_component(img: str, id: str, stock: float, info: str, price: float) 
                     height="8.5rem",
                     border_radius="50%",
                     box_shadow="5px 10px 20px rgba(0, 0, 0, 0.329)",
+                    loading="lazy",
                 ),
                 rx.stack(
                     rx.flex(
@@ -37,14 +38,14 @@ def product_component(img: str, id: str, stock: float, info: str, price: float) 
                             letter_spacing="1px",
                         ),
                         rx.text(
-                            f"Stock {formatted_stock} u",
+                            f"Stock {formatted_stock} {unit}",
                             font_size=Size.MEDIUM.value,
                             line_height=Size.LARGE.value,
                             color=DarkThemeColor.DANGER.value,
                         ),
                         justify="space-between"
                     ),
-                    rx.text(  # 1.stock(color), 2.(category[0:2].upper()}}-{{ '%05d' % id), 3.(name <br> info), 4.price => STOCK=0 -> Card_bg=LOW
+                    rx.text(  # 1.stock(color), 2.(category[0:2].upper()}}-{{ '%05d' % id), 3.(INFO), 4.price => STOCK=0 -> Card_bg=LOW
                         info,
                         font_size=Size.DEFAULT.value,
                         line_height=Size.LARGE.value,
@@ -62,7 +63,7 @@ def product_component(img: str, id: str, stock: float, info: str, price: float) 
                 ),
                 direction="column",
                 align="center",
-                bg=DarkThemeColor.SECONDARY.value,
+                bg=DarkThemeColor.SECONDARY.value if stock > 0 else DarkThemeColor.DANGER.value,
                 border_radius="20px",
                 box_shadow="0 20px 40px -14px rgba(0, 0, 0, 0.25)",
                 overflow="hidden",

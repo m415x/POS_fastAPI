@@ -5,6 +5,7 @@ from ..main.views.sidebar_menu_view import sidebar_menu_view
 from ..main.views.home_view import home_view
 from ..main.views.point_of_sale_view import point_of_sale_view
 from ..main.views.inventory_view import inventory_view
+from ..main.views.suppliers_view import suppliers_view
 
 
 # import styles
@@ -14,8 +15,9 @@ from ..styles.colors import DarkThemeColor
 def main_page() -> rx.Component:
     return rx.grid(
         sidebar_menu_view(),
-        # point_of_sale(),
-        inventory_view(),
+        point_of_sale_view(),
+        # inventory_view(),
+        # suppliers_view(),
         template_columns="1fr 27fr",
         template_rows="1fr 10fr",
         width="calc(100vw - 0em)",
