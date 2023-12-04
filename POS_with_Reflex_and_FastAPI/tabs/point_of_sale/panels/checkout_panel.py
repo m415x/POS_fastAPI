@@ -2,11 +2,11 @@ import reflex as rx
 from typing import List
 
 # import styles
-from .....styles.colors import DarkThemeColor
-from .....styles.sizes import Size
+from ....styles.colors import DarkThemeColor
+from ....styles.sizes import Size
 
 
-options_discount: List[str] = ["amount", "percentage",]
+options_discount: List[str] = ["$", "%",]
 
 
 # class RadioState(rx.State):
@@ -39,9 +39,9 @@ def checkout_panel() -> rx.Component:
             ),
             rx.radio_group(
                 options_discount,
-                default_value="amount",
+                default_value="$",
                 default_checked=True,
-                flex="0 0 45%",
+                flex="0 0 20%",
                 display="flex",
                 justify_content="space-between",
                 # on_change=RadioState.set_text,
@@ -60,7 +60,7 @@ def checkout_panel() -> rx.Component:
                 # value=NumberInputState.value,
                 default_value=0,  # type: ignore
                 # on_change=NumberInputState.set_value
-                flex="0 0 25%",
+                flex="0 0 50%",
             ),
             w="100%",
             wrap="wrap",

@@ -1,10 +1,10 @@
 import reflex as rx
 
 # import components
-from ..components.cart_component import cart_component
+from ....tabs.point_of_sale.components.cart_component import cart_component
 
 # import styles
-from .....styles.colors import DarkThemeColor
+from ....styles.colors import DarkThemeColor
 
 
 def cart_panel() -> rx.Component:

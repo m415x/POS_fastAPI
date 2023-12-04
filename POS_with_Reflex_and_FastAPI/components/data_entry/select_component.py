@@ -5,7 +5,7 @@ from typing import List
 from ...styles.colors import DarkThemeColor
 
 # import states
-# from ..states import State
+# from states import State
 
 
 options: List[str] = ["Option 1", "Option 2", "Option 3"]

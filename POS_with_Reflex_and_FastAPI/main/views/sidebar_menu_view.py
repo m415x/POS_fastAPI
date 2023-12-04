@@ -1,7 +1,7 @@
 import reflex as rx
 
 # import components
-from ..components.sidebar_component import sidebar_component
+from ...components.navigation.sidebar_component import sidebar_component
 
 # import styles
 from ...styles.colors import DarkThemeColor
@@ -15,10 +15,6 @@ def sidebar_menu_view() -> rx.Component:
             rx.image(
                 src=f"icons/avatar_{theme}.svg",
                 width="2.5vw",
-                # _hover={
-                #     "transition_duration": "0.3s",
-                #     "filter": "invert(70%)",
-                # },
                 style={
                     ":hover": {
                         "transition_duration": "0.3s",
@@ -46,6 +42,6 @@ def sidebar_menu_view() -> rx.Component:
             justify="space-between",
             align="center",
         ),
-        border_radius="15px",
+        # border_radius="15px",
         bg=DarkThemeColor.SECONDARY.value,
     )

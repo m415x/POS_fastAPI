@@ -1,6 +1,6 @@
 import reflex as rx
 
-# import views
+# import pages
 from .pages.main_page import main_page
 
 

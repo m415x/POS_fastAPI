@@ -1,7 +1,7 @@
 import reflex as rx
 
 # import components
-from ..components.product_component import product_component
+from ....tabs.point_of_sale.components.product_component import product_component
 
 
 def product_panel() -> rx.Component:

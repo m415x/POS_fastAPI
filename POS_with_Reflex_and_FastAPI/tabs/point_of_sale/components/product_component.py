@@ -1,11 +1,11 @@
 import reflex as rx
 
 # import styles
-from .....styles.colors import DarkThemeColor
-from .....styles.sizes import Size
+from ....styles.colors import DarkThemeColor
+from ....styles.sizes import Size
 
 # import utils
-from .....utils.formatting import format_int, format_float_1f, format_float_2f
+from ....utils.utils import format_int, format_float_1f, format_float_2f
 
 
 def product_component(img: str, id: str, stock: float, unit: str, info: str, price: float) -> rx.Component:

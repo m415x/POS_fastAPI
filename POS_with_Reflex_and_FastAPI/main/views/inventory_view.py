@@ -1,8 +1,8 @@
 import reflex as rx
 
 # import panels
-from ..tabs.inventory.panels.filter_panel import filter_panel
-from ..tabs.inventory.panels.inventory_panel import inventory_panel
+from ...tabs.inventory.panels.filter_panel import filter_panel
+from ...tabs.inventory.panels.inventory_panel import inventory_panel
 
 
 def inventory_view() -> rx.Component:

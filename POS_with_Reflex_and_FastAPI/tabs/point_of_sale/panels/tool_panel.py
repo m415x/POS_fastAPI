@@ -1,12 +1,12 @@
 import reflex as rx
 
 # import components
-from ....components.button_component import button_component
-from ....components.search_component import search_component
-from ....components.select_component import select_component
+from ....components.navigation.button_component import button_component
+from ....components.data_entry.search_component import search_component
+from ....components.data_entry.select_component import select_component
 
 # import styles
-from .....styles.colors import DarkThemeColor
+from ....styles.colors import DarkThemeColor
 
 
 def tool_panel() -> rx.Component:

@@ -1,8 +1,8 @@
 import reflex as rx
 
 # import panels
-from ..tabs.suppliers.panels.filter_panel import filter_panel
-from ..tabs.suppliers.panels.suppliers_panel import suppliers_panel
+from ...tabs.suppliers.panels.filter_panel import filter_panel
+from ...tabs.suppliers.panels.suppliers_panel import suppliers_panel
 
 
 def suppliers_view() -> rx.Component:

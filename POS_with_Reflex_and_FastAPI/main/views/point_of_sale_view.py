@@ -1,10 +1,10 @@
 import reflex as rx
 
 # import panels
-from ..tabs.point_of_sale.panels.tool_panel import tool_panel
-from ..tabs.point_of_sale.panels.product_panel import product_panel
-from ..tabs.point_of_sale.panels.cart_panel import cart_panel
-from ..tabs.point_of_sale.panels.checkout_panel import checkout_panel
+from ...tabs.point_of_sale.panels.tool_panel import tool_panel
+from ...tabs.point_of_sale.panels.product_panel import product_panel
+from ...tabs.point_of_sale.panels.cart_panel import cart_panel
+from ...tabs.point_of_sale.panels.checkout_panel import checkout_panel
 
 # import styles
 from ...styles.colors import DarkThemeColor
