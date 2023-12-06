@@ -13,7 +13,9 @@ class DarkThemeColor(Enum):
     OUTLINE = "#009bf0"
     BACKGROUND = "#111111"
     CONTENT = "#1c1d21"
-    HOVER = "#40444f"
+    HOVER = "#242424"
+    DARK_GREEN = "#162827"
+    MEDIUM_GREEN = "#173936"
 
 
 DARK_THEME_GRID = {

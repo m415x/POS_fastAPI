@@ -15,8 +15,8 @@ def main_page() -> rx.Component:
     return rx.grid(
         sidebar_menu_view(),
         rx.box(
-            point_of_sale_view(),
-            # inventory_view(),
+            # point_of_sale_view(),
+            inventory_view(),
             # suppliers_view(),
             padding="0.5em",
         ),

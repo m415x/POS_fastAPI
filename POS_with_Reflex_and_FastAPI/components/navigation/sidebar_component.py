@@ -5,7 +5,7 @@ def sidebar_component(src: str) -> rx.Component:
     return rx.image(
         src=f"icons/{src}",
         alt="i",
-        width="2.5vw",
+        h="2.5vw",
         transition="filter 0.1s ease-out",
         style={
             ":hover": {

@@ -20,7 +20,7 @@ def product_component(img: str, id: str, stock: float, unit: str, info: str, pri
                 rx.image(
                     src=img,
                     src_set="",  # <picture> <source avif><source webp><source jpg> </picture>
-                    alt="Green double couch with wooden legs",
+                    alt=f"Image from {info}",
                     margin_top="1rem",
                     width="8.5rem",
                     height="8.5rem",

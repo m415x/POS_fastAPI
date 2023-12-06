@@ -22,10 +22,17 @@ def cart_component() -> rx.Component:
     return rx.card(
         rx.flex(
             rx.text(
-                "Clavo",
+                "Tornillo muy copado que sirve para colgar cuadros de calidad",
                 font_size="1em",
                 flex="0 0 40%",
-                custom_attrs={'title': 'EF-00012'},
+                style={
+                    "display": "-webkit-box",
+                    "-webkit-box-orient": "vertical",
+                    "-webkit-line-clamp": "1",
+                    "overflow": "hidden"
+                },
+                custom_attrs={
+                    'title': 'EF-00012 | Tornillo muy copado que sirve para colgar cuadros de calidad'},
             ),
             rx.text(
                 "100",
@@ -84,7 +91,7 @@ def cart_component() -> rx.Component:
             align="center",
         ),
         w="100%",
-        h="4em",
+        h="3em",
         color=DarkThemeColor.WHITE.value,
         bg="transparent",
         justify="center",

@@ -3,6 +3,7 @@ from typing import List
 
 # import styles
 from ...styles.colors import DarkThemeColor
+from ...styles.fonts import FontWeight
 
 # import states
 # from states import State
@@ -26,13 +27,17 @@ def select_component() -> rx.Component:
         h="3em",
         max_w="200px",
         style={
-                    "cursor": "pointer",
-                    "option": {
-                        "background": DarkThemeColor.SECONDARY.value,
-                    },
-            "_focus": {
-                        "background": "transparent",
-                    },
+            "cursor": "pointer",
+            "option": {
+                "background": DarkThemeColor.SECONDARY.value,
+                "font_weight": FontWeight.LIGHT.value,
+            },
+            ":focus": {
+                "background": "transparent",
+            },
+            ":hover": {
+                "background": DarkThemeColor.HOVER.value,
+            },
         }
         # on_change=SelectState.set_option,
     )

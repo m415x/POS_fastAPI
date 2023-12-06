@@ -3,6 +3,9 @@ import reflex as rx
 # import pages
 from .pages.main_page import main_page
 
+# import styles
+from .styles.styles import STYLESHEETS, BASE_STYLE
+
 
 @rx.page()
 def index() -> rx.Component:
@@ -13,10 +16,8 @@ def index() -> rx.Component:
 
 # Add state and page to the app.
 app = rx.App(
-    stylesheets=[
-        "styles/point_of_sale.css",
-        "styles/inventory.css",
-    ],
+    stylesheets=STYLESHEETS,
+    style=BASE_STYLE
 )
 # app.add_page(index, route="/")
 app.compile()

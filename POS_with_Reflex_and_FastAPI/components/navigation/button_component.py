@@ -14,6 +14,7 @@ def button_component(text: str | None = None) -> rx.Component:
         min_w="3em",
         h="3em",
         bg=DarkThemeColor.SECONDARY.value,
+        font_weight="inherit !important",
         style={
             ":hover": {
                 "background": DarkThemeColor.HOVER.value,
