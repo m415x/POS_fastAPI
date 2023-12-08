@@ -1,0 +1,3 @@
+.sidebar-component.active {
+    filter: invert(100%);
+}

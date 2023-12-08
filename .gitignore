@@ -5,6 +5,6 @@
 .vscode
 .web
 __pycache__/
-uploads/
-tree.md
 new-tree/
+tree.md
+uploads/

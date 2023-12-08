@@ -5,8 +5,8 @@
 - [Description](#description)
 - [Features](#features)
 - [Built With](#built-with)
-  - [FastAPI](#fastapi)
   - [Reflex](#reflex)
+  - [FastAPI](#fastapi)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -35,18 +35,6 @@ The Point of Sale (POS) System is a comprehensive software solution designed to 
 
 This Point of Sale (POS) System is built using the following Python frameworks:
 
-### [FastAPI](https://fastapi.tiangolo.com/)
-
-FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It is designed to be easy to use and efficient, making it an excellent choice for developing the backend of this POS system.
-
-#### Why FastAPI?
-
-- **Fast Development:** FastAPI allows for rapid development with automatic interactive documentation, data validation, and serialization.
-
-- **High Performance:** It is built on top of Starlette and Pydantic, making it one of the fastest web frameworks available.
-
-- **Async Support:** FastAPI fully supports asynchronous programming, enabling efficient handling of concurrent operations.
-
 ### [Reflex](https://reflex.dev/)
 
 Reflex is an open-source, full-stack Python framework that makes it easy to build and deploy web apps in minutes. It offers the ease of use and accessibility of low-code frameworks, combined with the flexibility, performance, and customizability of traditional web development. Reflex is designed to be easy to get started with for those with no previous web development experience.
@@ -58,6 +46,18 @@ Reflex is an open-source, full-stack Python framework that makes it easy to buil
 - **Flexibility, performance, and customizability:** Reflex is built on top of the FastAPI framework, which provides a high-performance and scalable foundation for your web applications. It also offers a variety of features and customization options that allow you to build complex and sophisticated applications.
 
 - **Full-stack development:** Reflex is a full-stack framework, which means that it provides tools for both the front-end and back-end development of your web applications. This can save you time and effort, as you don't need to learn and integrate multiple frameworks and tools.
+
+### [FastAPI](https://fastapi.tiangolo.com/)
+
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.7+ based on standard Python type hints. It is designed to be easy to use and efficient, making it an excellent choice for developing the backend of this POS system.
+
+#### Why FastAPI?
+
+- **Fast Development:** FastAPI allows for rapid development with automatic interactive documentation, data validation, and serialization.
+
+- **High Performance:** It is built on top of Starlette and Pydantic, making it one of the fastest web frameworks available.
+
+- **Async Support:** FastAPI fully supports asynchronous programming, enabling efficient handling of concurrent operations.
 
 ## Getting Started
 
@@ -75,36 +75,36 @@ Before setting up the POS system, ensure that you have the following prerequisit
 
 1. Clone the Repository
 
-   > ```bash
-   > git clone https://github.com/m415x/POS_with_Reflex_and_FastAPI.git
-   > ```
+   ```bash
+   git clone https://github.com/m415x/POS_with_Reflex_and_FastAPI.git
+   ```
 
 2. Set Up Virtual Environment
 
-   > ```bash
-   > cd POS_with_Reflex_and_FastAPI
-   > python -m venv .venv
-   > ```
+   ```bash
+   cd POS_with_Reflex_and_FastAPI
+   python -m venv .venv
+   ```
 
 3. Activate Virtual Environment
 
-   > _Linux / macOS_
-   >
-   > ```bash
-   > source .venv/bin/activate
-   > ```
-   >
-   > _Windows_
-   >
-   > ```bash
-   > .venv\Scripts\activate
-   > ```
+   _Linux / macOS_
+
+   ```bash
+   source .venv/bin/activate
+   ```
+
+   _Windows_
+
+   ```bash
+   .venv\Scripts\activate
+   ```
 
 4. Install Dependencies
 
-   > ```bash
-   > pip install -r requirements.txt
-   > ```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
 5. Database Setup:
 
@@ -114,15 +114,18 @@ Before setting up the POS system, ensure that you have the following prerequisit
 
 6. Create the '.env' file in the root with the following variables
 
-   > ```text
-   > DB_URL="postgresql://<user>:<password>@localhost:5432/my_db"
-   > ```
+   ```text
+   DB_URL="postgresql://<user>:<password>@localhost:5432/my_db"
+   ```
 
 7. Start the Application
 
-   > ```bash
-   > reflex run
-   > reflex run --loglevel debug
-   > ```
+   ```bash
+   reflex run
+   ```
+
+   ```bash
+   reflex run --loglevel debug
+   ```
 
 8. In your browser, access http://localhost:3000/

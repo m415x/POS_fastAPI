@@ -6,6 +6,16 @@ from ...components.navigation.sidebar_component import sidebar_component
 # import styles
 from ...styles.colors import DarkThemeColor
 
+# import states
+from ...states import State
+
+
+class TabState(State):
+    choice: str = "home_view"
+
+    def set_choice(self, value: str):
+        self.choice = value
+
 
 def sidebar_menu_view() -> rx.Component:
     theme = "dark"
@@ -35,11 +45,32 @@ def sidebar_menu_view() -> rx.Component:
                 ),
             ),
             rx.vstack(
-                sidebar_component(f"home_{theme}.svg"),
-                sidebar_component(f"pos_{theme}.svg"),
-                sidebar_component(f"inventory_{theme}.svg"),
-                sidebar_component(f"suppliers_{theme}.svg"),
-                sidebar_component(f"clients_{theme}.svg"),
+                sidebar_component(
+                    "home",
+                    theme,
+                    on_click=TabState.set_choice("home")
+                ),
+                sidebar_component(
+                    "pos",
+                    theme,
+                    on_click=TabState.set_choice(
+                        "point_of_sale")
+                ),
+                sidebar_component(
+                    "inventory",
+                    theme,
+                    on_click=TabState.set_choice("inventory")
+                ),
+                sidebar_component(
+                    "suppliers",
+                    theme,
+                    on_click=TabState.set_choice("suppliers")
+                ),
+                sidebar_component(
+                    "clients",
+                    theme,
+                    on_click=TabState.set_choice("clients")
+                ),
                 # spacing="3em",
                 # margin_bottom="8em",
                 flex="0 0 60%",
@@ -47,7 +78,11 @@ def sidebar_menu_view() -> rx.Component:
             ),
             rx.menu(
                 rx.menu_button(
-                    sidebar_component(f"logout_{theme}.svg"),
+                    sidebar_component(
+                        "logout",
+                        theme,
+                        on_click=TabState.set_choice("")
+                    ),
                 ),
                 rx.menu_list(
                     rx.menu_item("Switch user"),

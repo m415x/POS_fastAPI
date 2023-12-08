@@ -1,10 +1,12 @@
 import reflex as rx
+from typing import Optional, Callable
 
 
-def sidebar_component(src: str) -> rx.Component:
+def sidebar_component(name: str, theme: str, on_click: Optional[Callable[[], None]] = None) -> rx.Component:
     return rx.image(
-        src=f"icons/{src}",
+        src=f"icons/{name}_{theme}.svg",
         alt="i",
+        class_name="sidebar-component",
         h="2.5vw",
         transition="filter 0.1s ease-out",
         style={
@@ -12,8 +14,6 @@ def sidebar_component(src: str) -> rx.Component:
                 "transition_duration": "0.3s",
                 "filter": "invert(70%)",
             },
-            ":active": {
-                "filter": "invert(100%)",
-            },
         },  # type: ignore
+        on_click=on_click
     )
