@@ -1,3 +1,9 @@
 .sidebar-component.active {
-    filter: invert(100%);
+    filter: invert(53%) sepia(46%) saturate(3567%) hue-rotate(152deg) brightness(92%) contrast(82%);
+}
+
+.css-xl71ch {
+    display: flex;
+    justify-content: center;
+    width: 90%;
 }

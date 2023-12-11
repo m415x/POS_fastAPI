@@ -11,7 +11,7 @@ from ...states import State
 
 
 class TabState(State):
-    choice: str = "home_view"
+    choice: str = "home"
 
     def set_choice(self, value: str):
         self.choice = value
@@ -26,8 +26,9 @@ def sidebar_menu_view() -> rx.Component:
                 rx.menu_button(
                     rx.image(
                         src=f"icons/avatar_{theme}.svg",
-                        width="2.5vw",
+                        w="90%",
                     ),
+                    w="90%",
                 ),
                 rx.menu_list(
                     rx.color_mode_button(
@@ -43,33 +44,38 @@ def sidebar_menu_view() -> rx.Component:
                     rx.menu_item("Example"),
                     position="relative"
                 ),
+                w="90%"
             ),
             rx.vstack(
                 sidebar_component(
                     "home",
                     theme,
-                    on_click=TabState.set_choice("home")
+                    choice=TabState.choice,
+                    on_click=TabState.set_choice("home"),
                 ),
                 sidebar_component(
-                    "pos",
+                    "point_of_sale",
                     theme,
-                    on_click=TabState.set_choice(
-                        "point_of_sale")
+                    choice=TabState.choice,
+                    on_click=TabState.set_choice("point_of_sale"),
                 ),
                 sidebar_component(
                     "inventory",
                     theme,
-                    on_click=TabState.set_choice("inventory")
+                    choice=TabState.choice,
+                    on_click=TabState.set_choice("inventory"),
                 ),
                 sidebar_component(
                     "suppliers",
                     theme,
-                    on_click=TabState.set_choice("suppliers")
+                    choice=TabState.choice,
+                    on_click=TabState.set_choice("suppliers"),
                 ),
                 sidebar_component(
                     "clients",
                     theme,
-                    on_click=TabState.set_choice("clients")
+                    choice=TabState.choice,
+                    on_click=TabState.set_choice("clients"),
                 ),
                 # spacing="3em",
                 # margin_bottom="8em",
@@ -81,7 +87,8 @@ def sidebar_menu_view() -> rx.Component:
                     sidebar_component(
                         "logout",
                         theme,
-                        on_click=TabState.set_choice("")
+                        choice=TabState.choice,
+                        on_click=TabState.set_choice(""),
                     ),
                 ),
                 rx.menu_list(
@@ -97,4 +104,6 @@ def sidebar_menu_view() -> rx.Component:
             align="center",
         ),
         bg=DarkThemeColor.SECONDARY.value,
+        h="100vh",
+        w="clamp(30px, 2.5vw, 50px)",
     )
