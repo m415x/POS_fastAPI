@@ -2,7 +2,7 @@ import reflex as rx
 
 # import styles
 from ....styles.colors import DarkThemeColor
-from ....styles.sizes import Size
+from ....styles.fonts import FONT_SIZES
 
 # import state
 from ....states import State
@@ -23,7 +23,8 @@ def cart_component() -> rx.Component:
         rx.flex(
             rx.text(
                 "Tornillo muy copado que sirve para colgar cuadros de calidad",
-                font_size="1em",
+                font_size="inherit",
+                class_name="description_cart",
                 flex="0 0 40%",
                 style={
                     "display": "-webkit-box",
@@ -36,7 +37,7 @@ def cart_component() -> rx.Component:
             ),
             rx.text(
                 "100",
-                font_size="1em",
+                font_size="inherit",
                 flex="0 0 15%",
                 text_align="right",
             ),
@@ -44,10 +45,8 @@ def cart_component() -> rx.Component:
                 rx.button(
                     "-",
                     variant="ghost",
-                    h="30px",
-                    w="30px",
                     padding="0",
-                    size="xs"
+                    size="xs",
                     # on_click=NumberInputState.decrement,
                 ),
                 rx.number_input(
@@ -70,8 +69,6 @@ def cart_component() -> rx.Component:
                 rx.button(
                     "+",
                     variant="ghost",
-                    h="30px",
-                    w="30px",
                     padding="0",
                     size="xs"
                     # on_click=NumberInputState.increment,
@@ -82,7 +79,7 @@ def cart_component() -> rx.Component:
             ),
             rx.text(
                 "2.000",
-                font_size="1em",
+                font_size="inherit",
                 flex="0 0 15%",
                 text_align="right",
             ),
@@ -97,4 +94,5 @@ def cart_component() -> rx.Component:
         justify="center",
         margin_top="0px !important",
         box_shadow="none",
+        font_size=FONT_SIZES,
     )

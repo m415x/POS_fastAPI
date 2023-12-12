@@ -41,5 +41,5 @@ BASE_STYLE = {
         ":hover": {
             "background": DarkThemeColor.HOVER.value
         },
-    }
+    },
 }

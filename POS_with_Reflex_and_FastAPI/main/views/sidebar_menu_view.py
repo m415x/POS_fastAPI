@@ -11,7 +11,7 @@ from ...states import State
 
 
 class TabState(State):
-    choice: str = "home"
+    choice: str = "point_of_sale"
 
     def set_choice(self, value: str):
         self.choice = value
