@@ -2,7 +2,7 @@ import reflex as rx
 
 # import panels
 from ...tabs.point_of_sale.panels.tool_panel import tool_panel
-from ...tabs.point_of_sale.panels.product_panel import product_panel
+from ...tabs.point_of_sale.panels.item_panel import item_panel
 from ...tabs.point_of_sale.panels.cart_panel import cart_panel
 from ...tabs.point_of_sale.panels.checkout_panel import checkout_panel
 
@@ -25,7 +25,7 @@ def point_of_sale_view() -> rx.Component:
             bg=DarkThemeColor.SECONDARY.value,
         ),
         rx.grid_item(
-            product_panel(),
+            item_panel(),
             col_span=19,
             row_span=10,
         ),

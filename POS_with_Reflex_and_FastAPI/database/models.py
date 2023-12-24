@@ -37,13 +37,21 @@ class ItemModel(rx.Model, table=True):
     )
     # relationships
     categories: Optional["CategoryModel"] = sqlmodel.Relationship(
-        back_populates="items")
+        back_populates="items",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
     units: Optional["UnitModel"] = sqlmodel.Relationship(
-        back_populates="items")
+        back_populates="items",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
     suppliers: Optional["SupplierModel"] = sqlmodel.Relationship(
-        back_populates="items")
+        back_populates="items",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
     users: Optional["UserModel"] = sqlmodel.Relationship(
-        back_populates="items")
+        back_populates="items",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
 
 
 class CategoryModel(rx.Model, table=True):
@@ -69,7 +77,10 @@ class CategoryModel(rx.Model, table=True):
         ),
     )
     # relationships
-    items: List[ItemModel] = sqlmodel.Relationship(back_populates="categories")
+    items: List[ItemModel] = sqlmodel.Relationship(
+        back_populates="categories",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
 
 
 class UnitModel(rx.Model, table=True):
@@ -77,7 +88,7 @@ class UnitModel(rx.Model, table=True):
     id: int = sqlmodel.Field(primary_key=True)
     name: str
     symbol: str
-    unit_type: List[str] = ["int", "float"]
+    unit_type: str = "int"
     create: datetime.datetime = sqlmodel.Field(
         default=None,
         sa_column=sqlalchemy.Column(
@@ -96,7 +107,10 @@ class UnitModel(rx.Model, table=True):
         ),
     )
     # relationships
-    items: List[ItemModel] = sqlmodel.Relationship(back_populates="units")
+    items: List[ItemModel] = sqlmodel.Relationship(
+        back_populates="units",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
 
 
 class SupplierModel(rx.Model, table=True):
@@ -124,7 +138,10 @@ class SupplierModel(rx.Model, table=True):
         ),
     )
     # relationships
-    items: List[ItemModel] = sqlmodel.Relationship(back_populates="suppliers")
+    items: List[ItemModel] = sqlmodel.Relationship(
+        back_populates="suppliers",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )
 
 
 class UserModel(rx.Model, table=True):
@@ -153,4 +170,7 @@ class UserModel(rx.Model, table=True):
         ),
     )
     # relationships
-    items: List[ItemModel] = sqlmodel.Relationship(back_populates="users")
+    items: List[ItemModel] = sqlmodel.Relationship(
+        back_populates="users",
+        sa_relationship_kwargs={"lazy": "selectin"},
+    )

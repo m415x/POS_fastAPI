@@ -126,28 +126,28 @@ svg {
 }
 
 
-/** PRODUCT PANEL **/
+/** ITEM PANEL **/
 
 /* Oculta la barra de desplazamiento por defecto */
-#product_panel {
+#item_panel {
     scrollbar-width: thin;
     scrollbar-color: transparent transparent;
 }
 
 /* Estilo para la barra de desplazamiento */
-#product_panel::-webkit-scrollbar {
+#item_panel::-webkit-scrollbar {
     width: 8px;
     /* Ancho de la barra de desplazamiento */
 }
 
-#product_panel::-webkit-scrollbar-thumb {
+#item_panel::-webkit-scrollbar-thumb {
     background-color: #888;
     /* Color de fondo de la barra de desplazamiento */
     border-radius: 4px;
     /* Radio de esquina de la barra de desplazamiento */
 }
 
-#product_panel:hover::-webkit-scrollbar-thumb {
+#item_panel:hover::-webkit-scrollbar-thumb {
     background-color: #555;
     /* Cambia el color de fondo cuando el ratón pasa por encima */
 }

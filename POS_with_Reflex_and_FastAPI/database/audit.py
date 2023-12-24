@@ -4,14 +4,14 @@ from datetime import datetime
 from typing import List, Optional
 
 
-class AuditBase(rx.Model, table=True):
+class AuditBaseModel(rx.Model, table=True):
     id: Optional[int] = sqlmodel.Field(default=None, primary_key=True)
     created_at: datetime = sqlmodel.Field(default=datetime.utcnow())
     updated_at: datetime = sqlmodel.Field(
         default=datetime.utcnow(), onupdate=datetime.utcnow())
 
 
-class ItemAudit(AuditBase):
+class ItemAuditModel(AuditBaseModel):
     category_id: int
     info: str
     stock: float
@@ -24,25 +24,25 @@ class ItemAudit(AuditBase):
     is_delete: bool
 
 
-class UnitAudit(AuditBase):
+class UnitAuditModel(AuditBaseModel):
     name: str
     type_of_unit: str
 
 
-class SupplierAudit(AuditBase):
+class SupplierAuditModel(AuditBaseModel):
     name: str
     email: str
     phone: str
     is_active: bool
 
 
-class UserAudit(AuditBase):
+class UserAuditModel(AuditBaseModel):
     username: str
     email: str
     role: str
     is_active: bool
 
 
-class CategoryAudit(AuditBase):
+class CategoryAuditModel(AuditBaseModel):
     name: str
     description: str

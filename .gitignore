@@ -5,6 +5,7 @@
 .vscode
 .web
 __pycache__/
-alembic/
 alembic.ini
+alembic/
+fontawesome/
 uploads/
